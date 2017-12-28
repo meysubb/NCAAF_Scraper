@@ -4,13 +4,13 @@
 # Version: 1.0
 # By: Meyappan Subbaiah
 # License: MPL 2.0 (see LICENSE file in root folder)
-# Additional thanks: Rodrigo Zamith (NCAA Basketball Stats Scraper) 
+# Additional thanks: Rodrigo Zamith (NCAA Basketball Stats Scraper)
 # Refer to http://stats.ncaa.org/team/inst_team_list?sport_code=MBB&division=1 in setting these variables
 ##############################################################
 
 # Select year for parsing
-academic_year = "2017" # Set the academic year (2012 refers to 2011-2012 season). As of writing, this can range from 2010 to 2013.
-year_index = "12424" # Set the index that maps to the academic year. This may be obtained from looking at the team URLs on the list of available teams, for the given academic year. As of writing, the [academic_year, year_index] mappings are: [2013, 11220], [2012, 10740], [2011, 10440], and [2010, 10260]
+academic_year = "2018" # Set the academic year (2012 refers to 2011-2012 season). As of writing, this can range from 2010 to 2013.
+year_index = "12623" # Set the index that maps to the academic year. This may be obtained from looking at the team URLs on the list of available teams, for the given academic year. As of writing, the [academic_year, year_index] mappings are: [2013, 11220], [2012, 10740], [2011, 10440], and [2010, 10260]
 
 
 # What do you want to do? (Note: Lower tiers need higher tiers, i.e., ind_game_stats requires map_players (Tier 2), which requires map_teams (Tier 1).)
@@ -20,8 +20,9 @@ map_players = 1 # Create a player mapping (0 = no, 1 = yes)
 ind_game_stats = 1 # Get individual game statistics (0 = no, 1 = yes)
 ind_player_stats = 1 # Get individual player statistics (0 = no, 1 = yes)
 ind_team_stats = 1 # Get individual team statistics (a line per team, such that each game will have two lines (one for away team, one for home team)) (0 = no, 1 = yes)
-ind_game_score = 1 # 
+ind_game_score = 1 #
 tstats = 1 # Get Team stats (From mainpage)
+summary_teams = 1
 
 
 # Where do you want to save the data?
@@ -31,7 +32,7 @@ schedule_mappingfile = "mappings/schedule_mappings.tsv" # Data file for schedule
 summary_rushing_data = "data/summary_rushing_data.tsv" # Data file for individual player summary statistics
 summary_passing_data = "data/summary_passing_data.tsv"
 summary_team_rushing_data = "data/summary_team_rushing_data.tsv" # Data file for team summary statistics
-summary_team_passing_data = "data/summary_team_passing_data.tsv" 
+summary_team_passing_data = "data/summary_team_passing_data.tsv"
 summary_team_data = "data/summary_team_data.tsv"
 game_data = "data/game_data.tsv" # Data file for each game
 game_score = "data/game_score.tsv"
