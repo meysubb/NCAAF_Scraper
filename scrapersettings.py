@@ -23,6 +23,7 @@ ind_team_stats = 1 # Get individual team statistics (a line per team, such that 
 ind_game_score = 1 #
 tstats = 1 # Get Team stats (From mainpage)
 summary_teams = 1
+division = 12
 
 
 # Where do you want to save the data?
@@ -58,5 +59,5 @@ http_header = {
             "Cache-Control": "no-cache"
             } # Variables from the HTTP header (default)
 
-start_url = 'http://stats.ncaa.org/team/inst_team_list?academic_year=' + str(academic_year) + "&conf_id=-1&division=11&sport_code=MFB#" # URL to start from (Change this for different years). You can get this URL from http://stats.ncaa.org/team/inst_team_list?sport_code=MBB&division=1. This URL is for the 2011-2012 season.
+start_url = 'http://stats.ncaa.org/team/inst_team_list?academic_year=' + str(academic_year) + "&conf_id=-1&division=" + str(division) + "&sport_code=MFB#" # URL to start from (Change this for different years). You can get this URL from http://stats.ncaa.org/team/inst_team_list?sport_code=MBB&division=1. This URL is for the 2011-2012 season.
 domain_base = 'http://stats.ncaa.org' # Base domain
