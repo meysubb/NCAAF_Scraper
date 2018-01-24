@@ -39,7 +39,7 @@ if (scrapersettings.map_schedule == 1):
         team_mainpage_data_soup = BeautifulSoup(c) # Soupify that page
         gamelinks = [] # Create a blank list for each game
         for link in team_mainpage_data_soup.find_all('a'): # Locate all links in the document
-            if "game/football/fbs/" in link.get('href'): # If they contain a URL segment suggesting it is a game...
+            if "game/football/" in link.get('href'): # If they contain a URL segment suggesting it is a game...
                 game_link = str(link.get('href')).split("?")[0] # Strip out any URL variables since we don't need them
                 try:
                     opponent_id = link.find_previous("td").find_previous("td").find("a").get('href').split("?org_id=")[1]
