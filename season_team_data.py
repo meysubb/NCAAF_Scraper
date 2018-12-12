@@ -28,8 +28,6 @@ team_mapping = scraperfunctions.get_team_mappings()
 for value, team in enumerate(team_mapping):
     roster_url = str(scrapersettings.domain_base) + "/team/" + team + "/" + str(scrapersettings.year_index)
     team_name = team_mapping[team][0]
-    if(team == '30'):
-        continue
     try:
         #time.sleep(2)
         r = requests.get(roster_url)
